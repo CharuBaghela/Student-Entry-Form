@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color:rgb(191, 220, 247);
+        }
+        .container{
+            margin:auto;
+            width:50vw;
+            height:80vh;
+            padding:30px;
+            background-color: white;
+            margin-top:10vh; 
+            border-radius:10px;
+            box-shadow: 2px 0 2px 3px whitesmoke;
+        }
+        input{
+        width:100%;
+        padding:5px;
+        margin:5px;
+        border-radius:2px;
+        border:1px solid lightgray;
+        letter-spacing: 1px;
+        }
+        h2{
+            margin-bottom:10px;
+        }
+        .submit-btn{
+            margin: 8px;
+            padding:5px;
+            border: none;
+            background-color: rgb(9, 132, 9);
+            color:white;
+            border-radius:4px;
+        }
+        .submit-btn:focus{
+            box-shadow:2px 0 2px 5px rgb(178, 235, 178);     
+        }
+        h3{
+            margin:10px;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+            padding: 8px;
+            margin: 5px;
+            display:flex;
+            align-items: center;
+        }
+        .top-student{
+            background-color:rgb(241, 159, 159);
+        }
+        .good-student{
+            background-color: rgb(79, 242, 147);
+        }
+        .average-student{
+            background-color: rgb(242, 242, 184);
+        }
+        .below-average{
+            background-color: lightgrey;
+        }
+        .delete-btn{
+            background-color: red;
+            color:white;
+            border: none;
+            border-radius:5px;
+            padding:5px;
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Entry Form</h2>
+        <form id="form">
+        <input type="text" placeholder="Student Name" id="studentname" name="name" ><br>
+        <input type="number" min="0" max="100" placeholder="Marks (Out of 100)" id="marks" name="marks"><br>
+        <button type="submit" id="submit" class="submit-btn">Add Student</button>
+        <hr>
+        <h3 >Total Student : <span id="total"></span></h3>
+        <h3 >Class Average Marks : <span id="average"></span></h3>
+        </form>
+        <ul id="list">
+
+        </ul>
+    </div>
+    <script src="./form-js.js"></script>
+</body>
+</html>
